@@ -26,7 +26,7 @@ st.markdown("""
 
     /* Título general (Blanco) */
     .titulo-blanco {
-        font-size: 3.0rem;
+        font-size: 4.5rem;
         font-weight: 800;
         margin-bottom: 0px;
         padding-bottom: 0px;
