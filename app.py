@@ -48,12 +48,20 @@ st.markdown("""
     }
 
         /* Nombre */
-    .Nombre {
+    .nombre {
         font-size: 1.8rem;
-        font-weight: 200;
+        font-weight: 800;
         margin-bottom: 0px;
         padding-bottom: 0px;
         color: #f8fafc; /* Color blanco */
+
+    }
+
+        /* Gradiente Nombre */
+    .nombre-gradiente {
+        background: linear-gradient(90deg, #a855f7, #6366f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 
     }
 
@@ -96,7 +104,7 @@ st.markdown("""
 # Título visualmente atractivo con HTML
 st.markdown('<h1 class="titulo-blanco">Calculadora de agua contenida en el aire - <span class="texto-gradiente">Psicrometría</span></h1>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">Análisis termodinámico avanzado para el cálculo de agua suspendida en espacios cerrados.</p>', unsafe_allow_html=True)
-st.markdown('<p class="nombre">Creado por: Santiago Treviño Radilla</p>', unsafe_allow_html=True)
+st.markdown('<h2 class="nombre">Creado por: <span class="nombre-gradiente">Santiago Treviño Radilla</span></h2>', unsafe_allow_html=True)
 st.markdown("---")
 
 # ==========================================
