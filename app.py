@@ -106,9 +106,9 @@ col1, col2 = st.columns(2)
 col3, col4 = st.columns(2)
 
 with col1:
-    st.metric(label="💧 Masa de Agua Suspendida", value=f"{m_w:.2f} kg", delta=f"Equivalente a {litros:.2f} Litros", delta_color="off")
+    st.metric(label="💧 Masa de Agua Suspendida", value=f"{litros:.2f} Litros", delta=f"Equivalente a {m_w:.2f} kg", delta_color="off")
 with col2:
-    st.metric(label="🌬️ Masa de Aire Seco", value=f"{m_a:.1f} kg", delta="Fluido portador", delta_color="off")
+    st.metric(label="🌬️ Masa de Aire Seco", value=f"{m_a:.1f} kg")
 with col3:
     st.metric(label="📈 Humedad Absoluta", value=f"{(hum_abs*1000):.1f} g/kg", delta=f"Presión de vapor: {pres_vap:.2f} kPa", delta_color="off")
 with col4:
