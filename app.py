@@ -11,7 +11,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Inyección de CSS avanzado (Animaciones, Gradientes y Tarjetas)
+# Inyección de CSS avanzado (Animaciones, Gradientes, Tema Claro)
 st.markdown("""
     <style>
     /* Animación de entrada Fade In */
@@ -24,93 +24,101 @@ st.markdown("""
         animation: fadeIn 0.8s ease-out;
     }
 
-    /* Título general (Blanco) */
-    .titulo-blanco {
+    /* Título general (Oscuro para fondo claro) */
+    .titulo-principal {
         font-size: 4.5rem;
         font-weight: 800;
         margin-bottom: 0px;
         padding-bottom: 0px;
-        color: #f8fafc; /* Color blanco */
+        color: #1e293b; /* Azul grisáceo oscuro */
     }
 
-    /* Clase específica solo para el gradiente */
+    /* Clase específica solo para el gradiente azul */
     .texto-gradiente {
-        background: linear-gradient(90deg, #a855f7, #6366f1);
+        background: linear-gradient(90deg, #00b4d8, #03045e);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-   
+    
     /* Subtítulo descriptivo */
     .subtitle {
-        color: #94a3b8;
+        color: #64748b;
         font-size: 1.2rem;
         margin-bottom: 2rem;
     }
 
-        /* Nombre */
+    /* Nombre del creador */
     .nombre {
         font-size: 1.8rem;
         font-weight: 800;
         margin-bottom: 0px;
         padding-bottom: 0px;
-        color: #f8fafc; /* Color blanco */
-
+        color: #1e293b;
     }
 
-        /* Gradiente Nombre */
+    /* Gradiente Nombre */
     .nombre-gradiente {
-        background: linear-gradient(90deg, #a855f7, #6366f1);
+        background: linear-gradient(90deg, #00b4d8, #03045e);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-
     }
 
-    /* Tarjetas de Métricas (Estilo SaaS) */
+    /* Insignia de la Universidad */
+    .universidad {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #475569;
+        margin-top: -5px;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Tarjetas de Métricas (Estilo Claro/Clean) */
     div[data-testid="stMetric"] {
-        background-color: #111827;
-        border: 1px solid #1f2937;
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
         padding: 20px;
         border-radius: 12px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         transition: all 0.3s ease;
     }
     
     div[data-testid="stMetric"]:hover {
         transform: translateY(-5px);
-        border-color: #6366f1;
-        box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2);
+        border-color: #00b4d8;
+        box-shadow: 0 10px 15px -3px rgba(0, 180, 216, 0.2);
     }
 
     /* Etiquetas de las métricas */
     div[data-testid="stMetricLabel"] > div > div > p {
-        color: #94a3b8;
+        color: #64748b;
         font-weight: 600;
         font-size: 1.1rem;
     }
 
     /* Valores principales de las métricas */
     div[data-testid="stMetricValue"] > div {
-        color: #f8fafc;
+        color: #0f172a;
         font-weight: 700;
     }
 
-    /* Estilo del slider para que tenga gradiente en la barra de progreso */
+    /* Estilo del slider para que tenga el gradiente azul en la barra de progreso */
     div[data-baseweb="slider"] > div > div > div:nth-child(1) {
-        background: linear-gradient(90deg, #a855f7, #6366f1) !important;
+        background: linear-gradient(90deg, #00b4d8, #03045e) !important;
     }
     </style>
     """, unsafe_allow_html=True)
 
-# Título visualmente atractivo con HTML
-st.markdown('<h1 class="titulo-blanco">Calculadora de agua contenida en el aire - <span class="texto-gradiente">Psicrometría</span></h1>', unsafe_allow_html=True)
+# Encabezados con HTML
+st.markdown('<h1 class="titulo-principal">Calculadora de agua contenida en el aire - <span class="texto-gradiente">Psicrometría</span></h1>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">Análisis termodinámico avanzado para el cálculo de agua suspendida en espacios cerrados.</p>', unsafe_allow_html=True)
-st.markdown('<h4 class="nombre"><span class="nombre-gradiente">Creado por:</span> Santiago Treviño Radilla</h4>', unsafe_allow_html=True)
+st.markdown('<h4 class="nombre">Creado por: <span class="nombre-gradiente">Santiago Treviño Radilla</span></h4>', unsafe_allow_html=True)
+st.markdown('<p class="universidad">Benemérita Universidad Autónoma de Puebla</p>', unsafe_allow_html=True)
 st.markdown("---")
 
 # ==========================================
 # 2. BARRA LATERAL (INPUTS DEL USUARIO)
 # ==========================================
-st.sidebar.markdown('<h2 style="color: white;">⚙️ Parámetros del Entorno</h2>', unsafe_allow_html=True)
+st.sidebar.markdown('<h2 style="color: #1e293b;">⚙️ Parámetros del Entorno</h2>', unsafe_allow_html=True)
 
 altitud = st.sidebar.number_input("Altitud de la ciudad (msnm)", min_value=0, max_value=5000, value=2135, step=50)
 
@@ -137,7 +145,7 @@ temperatura = st.sidebar.slider("Temperatura Bulbo Seco (°C)", min_value=-10.0,
 humedad_relativa = st.sidebar.slider("Humedad Relativa (%)", min_value=1.0, max_value=100.0, value=50.0, step=1.0)
 
 st.sidebar.markdown("---")
-st.sidebar.markdown('<h2 style="color: white;">📐 Dimensiones</h2>', unsafe_allow_html=True)
+st.sidebar.markdown('<h2 style="color: #1e293b;">📐 Dimensiones</h2>', unsafe_allow_html=True)
 volumen_salon = st.sidebar.number_input("Volumen del cuarto/salón (m³)", min_value=1.0, max_value=10000.0, value=150.0, step=10.0)
 
 # ==========================================
@@ -162,7 +170,7 @@ m_a, v_a, m_w, hum_abs, vol_esp, pres_vap, litros = calcular_agua_en_aire(temper
 # ==========================================
 # 4. DESPLIEGUE DE RESULTADOS (OUTPUTS)
 # ==========================================
-st.markdown('<h3 style="color: white; margin-top: 20px;">Resultados del Análisis Termodinámico</h3>', unsafe_allow_html=True)
+st.markdown('<h3 style="color: #1e293b; margin-top: 20px;">Resultados del Análisis Termodinámico</h3>', unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 col3, col4 = st.columns(2)
