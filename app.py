@@ -104,7 +104,7 @@ st.markdown("""
 # Título visualmente atractivo con HTML
 st.markdown('<h1 class="titulo-blanco">Calculadora de agua contenida en el aire - <span class="texto-gradiente">Psicrometría</span></h1>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">Análisis termodinámico avanzado para el cálculo de agua suspendida en espacios cerrados.</p>', unsafe_allow_html=True)
-st.markdown('<h2 class="nombre">Creado por: <span class="nombre-gradiente">Santiago Treviño Radilla</span></h2>', unsafe_allow_html=True)
+st.markdown('<h4 class="nombre"><span class="nombre-gradiente">Creado por:</span> Santiago Treviño Radilla</h4>', unsafe_allow_html=True)
 st.markdown("---")
 
 # ==========================================
