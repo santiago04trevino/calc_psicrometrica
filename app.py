@@ -24,20 +24,22 @@ st.markdown("""
         animation: fadeIn 0.8s ease-out;
     }
 
-    /* Título principal con Gradiente */
-    .title-gradient {
-        font-size: 3.5rem;
+    /* Título general (Blanco) */
+    .titulo-blanco {
+        font-size: 2.5rem;
         font-weight: 800;
         margin-bottom: 0px;
         padding-bottom: 0px;
-        color: white;
+        color: #f8fafc; /* Color blanco */
     }
-    .title-gradient span {
+
+    /* Clase específica solo para el gradiente */
+    .texto-gradiente {
         background: linear-gradient(90deg, #a855f7, #6366f1);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+   
     /* Subtítulo descriptivo */
     .subtitle {
         color: #94a3b8;
@@ -82,7 +84,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Título visualmente atractivo con HTML
-st.markdown('<h1 class="title-gradient">Calculadora de agua contenida en el aire - <span>Psicrometría</span></h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="titulo-blanco">Calculadora de agua contenida en el aire - <span class="texto-gradiente">Psicrometría</span></h1>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">Análisis termodinámico avanzado para el cálculo de agua suspendida en espacios cerrados.</p>', unsafe_allow_html=True)
 st.markdown("---")
 
