@@ -109,10 +109,11 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Encabezados con HTML
-st.markdown('<h1 class="titulo-principal">Calculadora de agua contenida en el aire - <span class="texto-gradiente">Psicrometría</span></h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="titulo-principal"><span class="texto-gradiente">Calculadora de agua contenida en el aire</span> (Psicrometría)</h1>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">Análisis termodinámico avanzado para el cálculo de agua suspendida en espacios cerrados.</p>', unsafe_allow_html=True)
 st.markdown('<h4 class="nombre">Creado por: <span class="nombre-gradiente">Santiago Treviño Radilla</span></h4>', unsafe_allow_html=True)
 st.markdown('<p class="universidad">Benemérita Universidad Autónoma de Puebla</p>', unsafe_allow_html=True)
+st.markdown('<p class="universidad">Facultad de Ingeniería Química - Colegio de Ingeniería Química</p>', unsafe_allow_html=True)
 st.markdown("---")
 
 # ==========================================
