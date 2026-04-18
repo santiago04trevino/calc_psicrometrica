@@ -5,7 +5,7 @@ import math
 # 1. CONFIGURACIÓN DE LA INTERFAZ (UI)
 # ==========================================
 st.set_page_config(
-    page_title="Psicrometría Pro",
+    page_title="Calculadora Psicrometría",
     page_icon="💧",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -82,7 +82,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Título visualmente atractivo con HTML
-st.markdown('<h1 class="title-gradient">Calculadora de <span>Psicrometría</span></h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="title-gradient">Calculadora de agua contenida en el aire - <span>Psicrometría</span></h1>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">Análisis termodinámico avanzado para el cálculo de agua suspendida en espacios cerrados.</p>', unsafe_allow_html=True)
 st.markdown("---")
 
